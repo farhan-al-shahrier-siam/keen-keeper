@@ -2,9 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Friend = ({ friend }) => {
-    const { name, days_since_contact, tags, status, picture } = friend;
+    const { id, name, days_since_contact, tags, status, picture } = friend;
+    // console.log(id)
     return (
-        <Link href="/friend-details">
+        <Link href={`/friend-details/${id}`}>
             <div className="text-center  rounded-2xl shadow-xl p-6 space-y-2">
                 <Image className="rounded-full mx-auto" src={picture} alt={name} height={80} width={80}></Image>
                 <h4 className="font-semibold text-2xl">{name}</h4>
