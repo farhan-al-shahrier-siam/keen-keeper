@@ -42,7 +42,7 @@
     "email": "farhana.rahman.art@gmail.com",
     "days_since_contact": 21,
     "status": "overdue",
-    "tags": ["art club", "creative"],
+    "tags": ["art club"],
     "bio": "Friend from a local art club. She paints landscapes and inspired me to try sketching.",
     "goal": 10,
     "next_due_date": "2026-03-26"
@@ -54,7 +54,7 @@
     "email": "imran.kabir.bd@gmail.com",
     "days_since_contact": 13,
     "status": "almost due",
-    "tags": ["gym", "fitness"],
+    "tags": ["fitness"],
     "bio": "Gym buddy who keeps pushing me to stay consistent. We started working out last year.",
     "goal": 14,
     "next_due_date": "2026-04-17"
@@ -78,7 +78,7 @@
     "email": "mahmudul.hasan@gmail.com",
     "days_since_contact": 16,
     "status": "overdue",
-    "tags": ["startup", "business"],
+    "tags": ["business"],
     "bio": "Worked together on a small startup idea that didn’t take off, but we learned a lot.",
     "goal": 14,
     "next_due_date": "2026-04-01"
