@@ -10,19 +10,19 @@ const Banner = () => {
             </div>
             <div className="grid p-2 md:p-0 grid-cols-2 md:grid-cols-4 gap-6 my-10">
                 <div className="text-center border-2 border-gray-200 rounded-xl space-y-2 p-8">
-                    <h3 className="font-semibold text-3xl">10</h3>
+                    <h3 className="font-semibold text-3xl">8</h3>
                     <p>Total Friends</p>
                 </div>
                 <div className="text-center border-2 border-gray-200 rounded-xl space-y-2 p-8">
-                    <h3 className="font-semibold text-3xl">3</h3>
+                    <h3 className="font-semibold text-3xl">2</h3>
                     <p>On Track</p>
                 </div>
                 <div className="text-center border-2 border-gray-200 rounded-xl  space-y-2 p-8">
-                    <h3 className="font-semibold text-3xl">6</h3>
+                    <h3 className="font-semibold text-3xl">3</h3>
                     <p>Need Attention</p>
                 </div>
                 <div className="text-center border-2 border-gray-200 rounded-xl  space-y-2 p-8">
-                    <h3 className="font-semibold text-3xl">12</h3>
+                    <h3 className="font-semibold text-3xl">3</h3>
                     <p>Interactions This Month</p>
                 </div>
                 

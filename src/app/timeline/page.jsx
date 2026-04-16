@@ -1,14 +1,15 @@
-"use client"
-import { TimeLineListContext } from "@/lib/providers";
-import { useContext } from "react";
+import TimeLine from "@/components/Timeline/TimeLine";
+
+export const metadata = {
+    title: "Keen-Keeper | Timeline",
+    description: "In this page call, text, video call history is shown",
+};
 
 const TimeLinePage = () => {
-    const [timelineList, setTimelineList] = useContext(TimeLineListContext)
-    console.log(timelineList)
+    
     return (
-        <div className="container mx-auto my-20">
-            <h1 className="font-bold text-5xl mb-6">Timeline</h1>
-            
+        <div>
+            <TimeLine></TimeLine>
         </div>
     );
 };

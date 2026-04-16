@@ -1,30 +1,35 @@
-"use client"
-import React, { useContext } from 'react';
+"use client";
+import React, { useContext } from "react";
 import Image from "next/image";
 import { FaBoxArchive, FaDeleteLeft } from "react-icons/fa6";
 import { HiMiniBellSnooze } from "react-icons/hi2";
 import { IoMdText } from "react-icons/io";
 import { TbPhoneCall } from "react-icons/tb";
 import { TiVideo } from "react-icons/ti";
-import { TimeLineListContext } from '@/lib/providers';
-const FriendDetail = ({friends, friendId}) => {
+import { TimeLineListContext } from "@/lib/providers";
+import { toast, ToastContainer } from "react-toastify";
+
+const FriendDetail = ({ friends, friendId }) => {
     const selectedFriend = friends.find((friend) => friend.id === parseInt(friendId));
     const { name, picture, email, days_since_contact, status, tags, bio, goal, next_due_date } = selectedFriend;
 
-    const [timelineList, setTimelineList] = useContext(TimeLineListContext)
+    const [timelineList, setTimelineList] = useContext(TimeLineListContext);
 
-    const handleCall=()=>{
-        setTimelineList([{ name, type:"call", time: `${new Date()}`}, ...timelineList])
+    const handleCall = () => {
+        setTimelineList([{ name, type: "call", time: `${new Date().toDateString()}` }, ...timelineList]);
+        toast.success(`Calling ${name}`);
         // console.log(timelineList)
-    }
-    const handleText=()=>{
-        setTimelineList([{ name, type:"text", time: `${new Date()}`}, ...timelineList])
+    };
+    const handleText = () => {
+        setTimelineList([{ name, type: "text", time: `${new Date().toDateString()}` }, ...timelineList]);
         // console.log(timelineList)
-    }
-    const handleVideo=()=>{
-        setTimelineList([{ name, type:"video", time: `${new Date()}`}, ...timelineList])
+        toast.success(`Text sent to ${name}`);
+    };
+    const handleVideo = () => {
+        setTimelineList([{ name, type: "video", time: `${new Date().toDateString()}` }, ...timelineList]);
         // console.log(timelineList)
-    }
+        toast.warning(`Video calling ${name}`);
+    };
 
     return (
         <div className="container mx-auto my-20 border border-gray-200 rounded-xl grid md:grid-cols-3 gap-6">
@@ -98,13 +103,19 @@ const FriendDetail = ({friends, friendId}) => {
                 <div className="p-6 shadow rounded-xl space-y-4">
                     <h3>Quick Check-In</h3>
                     <div className="flex justify-between ">
-                        <div onClick={handleCall} className="btn p-7"><TbPhoneCall></TbPhoneCall>Call</div>
-                        <div onClick={handleText} className="btn p-7"><IoMdText></IoMdText>Text</div>
-                        <div onClick={handleVideo} className="btn p-7"><TiVideo></TiVideo> Video</div>
-                        
+                        <div onClick={handleCall} className="btn p-7">
+                            <TbPhoneCall></TbPhoneCall>Call
+                        </div>
+                        <div onClick={handleText} className="btn p-7">
+                            <IoMdText></IoMdText>Text
+                        </div>
+                        <div onClick={handleVideo} className="btn p-7">
+                            <TiVideo></TiVideo> Video
+                        </div>
                     </div>
                 </div>
             </div>
+            <ToastContainer/>
         </div>
     );
 };
