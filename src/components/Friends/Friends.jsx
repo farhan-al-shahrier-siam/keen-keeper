@@ -1,7 +1,7 @@
 import Friend from "./Friend";
 
 const Friends = async() => {
-    const data = await fetch("http://localhost:3000/friends.json")
+    const data = await fetch("https://keen-keeper-alpha-sable.vercel.app/friends.json")
     const friends = await data.json()
     // console.log(friends)
     return (

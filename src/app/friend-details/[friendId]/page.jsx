@@ -8,7 +8,7 @@ export const metadata = {
 const FriendIdPage = async ({ params }) => {
     const { friendId } = await params;
 
-    const data = await fetch("http://localhost:3000/friends.json");
+    const data = await fetch("https://keen-keeper-alpha-sable.vercel.app/friends.json");
     const friends = await data.json();
 
 
