@@ -1,19 +1,7 @@
-"use client";
-
-import { createContext, useState } from "react";
-
-export const TimeLineListContext = createContext([]);
+import Context from "@/Context/Context";
 
 const Providers = ({ children }) => {
-    const [timelineList, setTimelineList] = useState([]);
-
-    return (
-        <div>
-            <TimeLineListContext value={[timelineList, setTimelineList]}>
-                {children}
-            </TimeLineListContext>
-        </div>
-    );
+    return <Context>{children}</Context>;
 };
 
 export default Providers;

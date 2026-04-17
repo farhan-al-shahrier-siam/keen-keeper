@@ -21,7 +21,7 @@ const Navbar = () => {
                         <Link className={`${pathName === "/timeline" ? "bg-[#244D3F] text-white":""}`} href="/timeline"><IoTimerOutline />Timeline</Link>
                     </li>
                     <li>
-                        <Link className={`${pathName === "/stats" ? "bg-[#244D3F] text-white":""}`} href="stats"><TfiStatsUp />Stats</Link>
+                        <Link className={`${pathName === "/stats" ? "bg-[#244D3F] text-white":""}`} href="/stats"><TfiStatsUp />Stats</Link>
                     </li>
                     
                 </ul>

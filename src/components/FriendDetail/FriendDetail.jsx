@@ -6,12 +6,14 @@ import { HiMiniBellSnooze } from "react-icons/hi2";
 import { IoMdText } from "react-icons/io";
 import { TbPhoneCall } from "react-icons/tb";
 import { TiVideo } from "react-icons/ti";
-import { TimeLineListContext } from "@/lib/providers";
+
 import { toast, ToastContainer } from "react-toastify";
+import { TimeLineListContext } from "@/Context/Context";
 
 const FriendDetail = ({ friends, friendId }) => {
-    const selectedFriend = friends.find((friend) => friend.id === parseInt(friendId));
+    const selectedFriend = friends.find((friend) => friend.id == parseInt(friendId));
     const { name, picture, email, days_since_contact, status, tags, bio, goal, next_due_date } = selectedFriend;
+    // console.log(name)
 
     const [timelineList, setTimelineList] = useContext(TimeLineListContext);
 
